@@ -1,0 +1,73 @@
+{
+  "layer": "top",
+  "position": "top",
+  "spacing": 3,
+  "height": 1,
+  "margin-top": 7,
+  "margin-left": 400,
+  "margin-right": 400,
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["mpris"],
+
+  "modules-right": [
+    "wireplumber",
+    "backlight",
+    "battery",
+    "clock",
+    "custom/notification",
+    "custom/lock",
+    "custom/power"
+  ],
+
+  "custom/tab": {
+    "format": "[Z]",
+    "on-click": "rofi -show drun"
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "default": "○",
+      "active": "●",
+      "urgent": "●"
+    }
+  },
+
+  "mpris": {
+    "format": " {artist} - {title} ",
+    "format-paused": "󰐊 {artist} - {title} ",
+    "max-length": 60,
+    "tooltip": true,
+    "player": "spotify"
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 6
+  },
+
+  "wireplumber": {
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 muted",
+    "on-click": "pavucontrol",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"],
+      "headphones": "󰋋",
+      "headset": "󰋎"
+    }
+  },
+
+  "clock": {
+    "format": "{:%H:%M}"
+  },
+
+  "custom/lock": {
+    "format": " ",
+    "on-click": "hyprlock",
+    "tooltip": true,
+    "tooltip-format": "Lock Screen"
+  }
+}
